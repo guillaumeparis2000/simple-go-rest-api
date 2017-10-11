@@ -1,6 +1,9 @@
-package main
+package router
 
-import "net/http"
+import (
+	"net/http"
+	"github.com/guillaumeparis2000/rest-api/handlers"
+)
 
 type Route struct {
 	Name 		string
@@ -16,36 +19,36 @@ var routes = Routes{
 		"Index",
 		"GET",
 		"/",
-		Index,
+		handlers.Index,
 	},
 	Route{
 		"TodoIndex",
 		"GET",
 		"/todos",
-		TodoIndex,
+		handlers.TodoIndex,
 	},
 	Route{
 		"TodoShow",
 		"GET",
 		"/todos/{todoId}",
-		TodoShow,
+		handlers.TodoShow,
 	},
 	Route{
 		"TodoDelete",
 		"DELETE",
 		"/todos/{todoId}",
-		TodoDelete,
+		handlers.TodoDelete,
 	},
 	Route{
 		"TodoUpdate",
 		"PUT",
 		"/todos/{todoId}",
-		TodoUpdate,
+		handlers.TodoUpdate,
 	},
 	Route{
 		"TodoCreate",
 		"POST",
 		"/todos",
-		TodoCreate,
+		handlers.TodoCreate,
 	},
 }

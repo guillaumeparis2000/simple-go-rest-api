@@ -4,10 +4,11 @@ import (
 	"log"
 	"net/http"
 	"github.com/guillaumeparis2000/rest-api/models"
+	"github.com/guillaumeparis2000/rest-api/router"
 )
 
 func main(){
-	router := NewRouter()
+	router := router.NewRouter()
 
 	models.InitDb()
 
