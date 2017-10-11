@@ -30,7 +30,7 @@ go build
 
 ## Available methos
 | Path  | Method  | Action  |
-|---|---|---|---|---|
+|---|---|---|
 | /todos  | GET  | List all todos  |
 | /todos  | POST  | Create a new Todo  |
 | /todos/{id}  | GET  | Show a todo detail  | 
